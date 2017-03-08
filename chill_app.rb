@@ -10,10 +10,10 @@ class ChillApp < Sinatra::Base
   #Show: GET "/billy", returns a specializaed welcome message for whatever name is passed to it as a param
   get "/billy" do
     result = params[:name]
-    body("Hello there #{result[:name]}. We haven't chilled in a while. You want to come by Friday? Netflix has a couple of good movies.")
+    body("Hello there #{result}. We haven't chilled in a while. You want to come by Friday? Netflix has a couple of good movies.")
   end
 #Lorem: GET "/lorem/standard", returns lorem ipsum of the type requested
   get "/lorem/standard" do
-    body("Loren ipsum")
+    body("http://meettheipsums.com/")
   end
 end

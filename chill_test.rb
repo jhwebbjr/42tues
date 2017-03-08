@@ -19,12 +19,14 @@ class ChillTest < Minitest::Test
   end
 
   def test_specialized_message
-    get "/billy"
-    result = params["name"]
-    assert_equal "Hello there #{result}. We haven't chilled in a while. You want to come by Friday? Netflix has a couple of good movies."
+    get "/billy?name=James"
+    response = get "/"
+    assert response = "Hello there James. We haven't chilled in a while. You want to come by Friday? Netflix has a couple of good movies."
   end
 
   def test_loren_ipsum
-
+    get "/loren/standard"
+    response = "/loren/standard"
+    assert response = "http://meettheipsums.com/"
   end
 end
